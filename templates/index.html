@@ -12,6 +12,7 @@
             margin: 0;
             background-color: #f0f4f8;
             font-family: Arial, sans-serif;
+            position: relative;
         }
 
         .box {
@@ -23,11 +24,29 @@
             font-size: 20px;
             color: #333333;
         }
+
+        .red-dot {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            from {opacity: 1;}
+            to {opacity: 0.1;}
+        }
     </style>
 </head>
 <body>
     <div class="box">
         <strong>IT'S WORKING THERE</strong><br>DEPLOYMENT SUCCESSFUL
     </div>
+    <a href="/name"><div class="red-dot"></div></a>
 </body>
 </html>
